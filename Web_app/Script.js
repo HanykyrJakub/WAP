@@ -6,14 +6,14 @@ function showTab(n){
     x[n].style.display = "block";
 
     if (n == 0){
-        document.getElementById(Předchozi).style.display = "none";
+        document.getElementById("predchozi").style.display = "none";
     } else{
-        document.getElementById(dalsi).style.display = "inline";
+        document.getElementById("predchozi").style.display = "inline";
     }
     if(n == (x.length - 1)){
-        document.getElementById(dalsi).innerHTML = "Přihlásit"
+        document.getElementById("dalsi").innerHTML = "Přihlásit"
     } else{
-        document.getElementById(dalsi).innerHTML = "Další"
+        document.getElementById("dalsi").innerHTML = "Další"
     }
 
     fixStepIndicator(n);

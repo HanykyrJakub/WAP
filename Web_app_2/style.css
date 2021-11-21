@@ -1,0 +1,41 @@
+ body{
+    background-color: rgb(236, 230, 230);
+    color: black;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+
+    font:normal 25px Arial, Helvetica,
+        sans-serif;
+
+    line-height:1.6em;
+    margin:0;
+ }
+
+ .button{
+    border: none;
+    color: white;
+    padding: 30px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 3px;
+    cursor: pointer;
+ }
+
+ .container{
+     width: 80%;
+     margin:auto;
+ }
+
+ .box-a{
+     background-color: chocolate;
+    color:white;
+
+    border-right: 5px red solid;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+ }
