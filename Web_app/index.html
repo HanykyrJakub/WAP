@@ -1,7 +1,32 @@
-<!DOCTYPE html>
-<html lang="cz">
-  <head>
-  </head>
-  <body>
-  </body>
-</html>
+<form id="regisForm" action="">
+    <h1>Registrace:</h1>
+
+    <div class="tab">Jméno:
+        <p><input placeholder="Jméno" oninput="this.className = ''"></p>
+        <p><input placeholder="Příjmení" oninput="this.className = ''"></p>
+    </div>
+
+    <div class = "tab">Kontakty:
+        <p><input placeholder="Email" oninput="this.className = ''"></p>
+        <p><input placeholder="Telefon" oninput="this.className = ''"></p>
+    </div>
+
+    <div class="tab">Přihlášení:
+        <p><input placeholder="Uživatelské Jméno:" oninput="this.className = ''"></p>
+        <p><input placeholder="Heslo:" oninput="this.className = ''"></p>
+    </div>
+    <div style="overflow:auto;">
+        <div style ="float:right;">
+            <button type ="button" id="předchozi" on click = "dalsi(-1)">předchozi</button>
+            <button type ="button" id="dalsi" on click = "dalsi(1)">dalsi</button>
+        </div>
+    </div>
+
+    <div style="text-align:center;margin-top:50px;">
+        <span class="krok"></span>
+        <span class="krok"></span>
+        <span class="krok"></span>
+    </div>
+    <link rel="stylesheet" href="main.css">
+    <script src="Script.js"></script>
+</form>
