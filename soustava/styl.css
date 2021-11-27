@@ -1,0 +1,151 @@
+:root{
+    --sun-top: 45vh;
+    --sun-left: 45vw;
+    --sun-radius: 2.5rem; 
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        height: 100vh;
+        background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+    }
+
+    div:not(.sun) {
+        background-color: transparent;
+        border: solid 2px rgba(156, 150, 149, 0.2);
+        border-radius: 1000px;
+        position: absolute;
+        box-sizing: border-box;
+    }
+
+    .sun{
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/220px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg");
+        background-size: 130%;
+        background-position: center;
+        width: calc(var(--sun-radius) * 2);
+        height: calc(var(--sun-radius) * 2);
+        border-radius: calc(var(--sun-radius) * 2);
+        position: relative;
+        top: var(--sun-top);
+        left: var(--sun-left);
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    div::after{
+        position: absolute;
+        content: "";
+        border-radius: 1000px;
+        background-position: center;
+        box-shadow: inset 2px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .merkur{
+        width: 7.5rem;
+        height: 7.5rem;
+        top: calc(var(--sun-top) - 3.75rem + var(--sun-radius));
+        left: calc(var(--sun-left) - 3.75rem + var(--sun-radius));
+        animation: movement 1s infinite linear;
+    }
+
+    .merkur::after{
+        width: 0.5rem;
+        height: 0.5rem;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/220px-Mercury_in_color_-_Prockter07-edit1.jpg");
+        background-size: 200%;
+        top: calc(50% - 0.25rem);
+        left: -0.3125rem;
+    }
+    .venus {
+        width: 10rem;
+        height: 10rem;
+        top: calc(var(--sun-top) - 5rem + var(--sun-radius));
+        left: calc(var(--sun-left) - 5rem + var(--sun-radius));
+        animation: movement 2.6s infinite linear;
+    }
+
+    .venus::after{
+        width: 0.9375rem;
+        height: 0.9375rem;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Venus-real_color.jpg/220px-Venus-real_color.jpg");
+        background-size: 170%;
+        top:calc(50% - 0.46875rem);
+        left: -0.53125rem;
+    }
+
+    .earth{
+        width: 13.75rem;
+        height: 13.75rem;
+        top:calc(var(--sun-top) - 6.875rem + var(--sun-radius));
+        left: calc(var(--sun-left) - 6.875rem + var(--sun-radius));
+        animation: movement 4.1s infinite linear;
+    }
+
+    .earth::after {
+        width: 1rem;
+        height: 1rem;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/220px-The_Earth_seen_from_Apollo_17.jpg");
+        top: calc(50% - 0.5rem);
+        left: -0.5625rem;
+    }
+
+    .moon{
+        width: 1.875rem;
+        height: 1.875rem;
+        top: calc(50% - 0.9375rem);
+        left: -1rem;
+        animation: movement 307ms infinite linear;
+    }
+
+    .moon::after{
+        width: 0.375rem;
+        height: 0.375rem;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/220px-FullMoon2010.jpg");
+        background-size: 210%;
+        top:calc(50% - 0.1875rem);
+        left: -0.25rem;
+    }
+
+    @keyframes movement {
+        from{
+            transform: rotate(0deg);
+        }
+
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        :root {
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        :root {
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        :root {
+            font-size: 8px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        :root {
+            font-size: 6px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        :root {
+            font-size: 4px;
+        }
+    }
