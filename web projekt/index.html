@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styl.css">
+    <title>Stránka</title>
+</head>
+<body>
+        <form id="form">
+        <div class="tab">Pocet knih:
+            <input
+            id="books"
+            name="books"
+            type="number"
+            min="1"
+            max="999"
+            required
+            >
+
+        </div>
+        </div>
+        <div class="rok narození">vek:
+           <input
+           id="age"
+           name="age"
+           type="number"
+           min="1"
+           max="999"
+           step="1"
+           required
+           >
+        </div>
+        <div class="tab">Sumbit:
+            <input type="submit">
+        </div>
+    </form>
+
+    <table id="show">
+        <tr>
+            <th>Vek</th>
+            <th>pocet knih</th>
+        </tr>    
+        </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
