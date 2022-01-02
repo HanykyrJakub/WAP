@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(15, 238, 34);
+}
+
+header {
+    text-align: center;
+    color: black ;
+    font-size: 30px;
+}
+h1 {
+    text-align: center;
+    text-shadow: 0 10px 15px darkgreen;
+}
+button {
+    margin: 15px;
+    height: 30px;
+    width: 75px;
+    color:rgb(0, 0, 0);
+}
+
+article {
+    margin: 20px;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+p {
+    margin: 20px;
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 4px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    font-size: 50px;
+    position: absolute;
+    top: 750px;
+    left: 10px;
+}
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: rgb(53, 24, 223);
+    color: #06f826;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+}
+ul {
+    display: -ms-flexbox;
+    display: inline;
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #0a67f1;
+    font-size: 15px;
+}
+/*# sourceMappingURL=mod_4.css.map */

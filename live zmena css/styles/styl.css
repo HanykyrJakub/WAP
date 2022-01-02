@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: aqua;
+  }
+  
+  header {
+    text-align: center;
+    color: brown;
+    font-size: 30px;
+  }
+  
+  h1 {
+    text-align: center;
+    text-shadow: 0 5px 10px #2d376e;
+  }
+  
+  button {
+    margin: 25px;
+    height: 60px;
+    width: 120px;
+    color: royalblue;
+  }
+  
+  article {
+    margin: 25px;
+    font-size: 45px;
+  }
+  
+  p {
+    margin: 25px;
+    font-size: 50px;
+    color: red;
+    text-shadow: 0 6px 10px white;
+  }
+  
+  footer {
+    font-size: 30px;
+    position: absolute;
+    top: 720px;
+    left: 20px;
+  }
+  
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: aqua;
+    color: #FFFCC2;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+  }
+  
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  li {
+    list-style: none;
+    margin: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+  }
+  /*# sourceMappingURL=styl.css.map */
