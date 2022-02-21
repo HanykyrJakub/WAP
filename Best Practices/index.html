@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>Best Practices</title>
+        <meta charset="utf-8" />   
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styl.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <form action="#" method="post">
+            <h1>Příhlášení</h1>
+            <section>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="username" required autofocus>
+            </section>
+            <section>
+                <label for="current-password">Password</label>
+                <button id="toggle-password" type="button" aria-label="Odhal heslo. Upozornění! ">Show password</button>
+                <input id="password" name="heslo" type="password" autocomplete="current-password" aria-describedby="password-constraints" required>
+  <div id="password-constraints">Aspon 8 písmen, rozlisujte malá a velká písmena</div>
+            </section>
+            <button id="sign-in">Prihlasit</button>
+          </form>
+    </body>  
+</html>
