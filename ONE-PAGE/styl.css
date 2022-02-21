@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(212, 248, 248);
+}
+
+body{
+    font-family: "roboto", sans-serif;
+}
+
+.content{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: medium;
+}
+
+img{
+    width: 25%;
+  height: auto;
+}
