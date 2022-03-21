@@ -1,0 +1,2 @@
+body{background-color:blue;color:#fffdfd}.gallery{display:grid;gap:1em;grid-template-columns:1fr}@media (min-width: 500px){.gallery{grid-template-columns:1fr, 1fr}}@media (min-width: 800px){.gallery{grid-template-columns:repeat(3, 1fr)}}.gallery>div{padding:1em;background-color:#222;transition:all 250ms ease-in-out}.gallery>div:hover{z-index:999;box-shadow:0 0 0.5em #000;transform:scale(1.05s)}.gallery>div figure{overflow:hidden}.gallery>div img{transition:all 250ms ease-in-out;width:100%}
+/*# sourceMappingURL=style.min.css.map */
