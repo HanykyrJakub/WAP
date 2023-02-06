@@ -1,5 +1,5 @@
 <?php
-    require_once './OOP/APP/password.php';
+    require_once './APP/password.php';
 
 class PasswordTest{
     public function testGenerate() {
