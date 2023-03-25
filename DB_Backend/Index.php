@@ -10,8 +10,8 @@
 <?php
 $hostname = "localhost";
 $username = "root";
-$password = "";
-$dm_name  = "beckend";
+$password = "root";
+$dm_name  = "backend";
 
 $conn = new mysqli($hostname,$username,$password,$dm_name);
 if ($conn->connect_error){
