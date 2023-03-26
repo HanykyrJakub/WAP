@@ -1,4 +1,8 @@
 <?php
+$hostname = "localhost";
+$username = "root";
+$password = "root";
+$dm_name  = "jezdci";
 $conn = mysqli_connect($hostname,$username,$password,$dm_name);
 
 if ($conn->connect_error){
@@ -7,7 +11,7 @@ if ($conn->connect_error){
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM beckend WHERE id = $id";
+$sql = "DELETE FROM drivers WHERE id = $id";
 
 
 if ($conn->query($sql) === TRUE){
