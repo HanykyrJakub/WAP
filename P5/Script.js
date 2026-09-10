@@ -20,7 +20,6 @@ const langs = [
 ];
 
 let charSize = 20;
-let fallRate = charSize / 2;
 let streams = [];
 
 class Char {
@@ -32,45 +31,41 @@ class Char {
   }
 
   draw() {
-    const flick = random(100);
     // 10 percent chance of flickering a number instead
-    if (flick < 10) {
+    if (random(100) < 10) {
       fill(120, 30, 100);
       text(round(random(9)), this.x, this.y);
     } else {
       text(this.value, this.x, this.y);
     }
 
-    // fall down
-    this.y = this.y > height ? 0 : this.y + this.speed;
+    // Fall down and loop back to top
+    this.y = this.y > height ? -charSize : this.y + this.speed;
   }
 }
 
-// -------------------------------------
 class Stream {
   constructor(text, x) {
-    const y = random(text.length);
+    // Random initial vertical position offset (in pixels)
+    const startY = random(-height, 0);
     const speed = random(2, 10);
     this.chars = [];
 
-    for (let i = text.length; i >= 0; i--) {
+    // Loop from 0 to text.length - 1
+    for (let i = 0; i < text.length; i++) {
       this.chars.push(
-        new Char(text[i], x, (y + text.length - i) * charSize, speed)
+        new Char(text[i], x, startY + i * charSize, speed)
       );
     }
   }
 
   draw() {
-    fill(120, 100, 100);
     this.chars.forEach((c, i) => {
-      // 30 percent chance of lit tail
-      const lit = random(100);
-      if (lit < 30) {
-        if (i === this.chars.length - 1) {
-          fill(120, 30, 100);
-        } else {
-          fill(120, 100, 90);
-        }
+      // Highlight the lead character bright white/light-green
+      if (i === this.chars.length - 1) {
+        fill(120, 30, 100);
+      } else {
+        fill(120, 100, 90);
       }
 
       c.draw();
@@ -79,7 +74,6 @@ class Stream {
 }
 
 function createStreams() {
-  // create random streams from langs that span the width
   for (let i = 0; i < width; i += charSize) {
     streams.push(new Stream(random(langs), i));
   }
@@ -91,23 +85,24 @@ function reset() {
 }
 
 function setup() {
-  createCanvas(innerWidth, innerHeight);
-  reset();
+  createCanvas(windowWidth, windowHeight);
   frameRate(20);
   colorMode(HSB);
   noStroke();
   textSize(charSize);
   textFont("monospace");
   background(0);
+  reset();
 }
 
 function draw() {
-  background(0, 0.4);
+  // Semi-transparent background creates the classic trailing motion blur effect
+  background(0, 0, 0, 0.4);
   streams.forEach((s) => s.draw());
 }
 
 function windowResized() {
-  resizeCanvas(innerWidth, innerHeight);
+  resizeCanvas(windowWidth, windowHeight);
   background(0);
   reset();
 }
